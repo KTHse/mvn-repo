@@ -37,35 +37,38 @@ distributionManagement section of pom.xml.
 ```xml
   <distributionManagement>
     <repository>
-      <id>repo</id>
+      <id>releases</id>
       <url>https://github.com/KTHse/mvn-repo/raw/master/releases</url>
     </repository>
     <snapshotRepository>
-      <id>snapshot-repo</id>
+      <id>snapshots</id>
       <url>https://github.com/KTHse/mvn-repo/raw/master/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 ```
 
 Deploy your artifacts to the repo the normal mvn way, but supplying the path 
-to the local mvn-repo git repository to put the data there.
+to the local mvn-repo git repository to put the data there. Here, `snapshots`
+is the id of the repository as specified in the pom.xml above, and the path
+after `file:` is the relative path to the mvn-repo git clone. The example
+below assumes that the project resides side-by-side in the same root folder.
 
 ```
 cd some-project
-mvn -DaltDeploymentRepository=snapshot-repo::default::file:../mvn-repo/snapshots/ clean deploy
+mvn -DaltDeploymentRepository=snapshots::default::file:../mvn-repo/snapshots/ clean deploy
 ```
 
 To deploy to the releases repo, specify the repo and the path to releases
 
 ```
-mvn -DaltDeploymentRepository=repo::default::file:../mvn-repo/releases/ clean deploy
+mvn -DaltDeploymentRepository=releases::default::file:../mvn-repo/releases/ clean deploy
 ```
 
 Optionally you may want to include a source jar for that truly open source 
 feeling and to make it easier to use your code in, e.g., Eclipse.
 
 ```
-mvn -DaltDeploymentRepository=snapshot-repo::default::file:../mvn-repo/snapshots/ clean source:jar deploy
+mvn -DaltDeploymentRepository=snapshots::default::file:../mvn-repo/snapshots/ clean source:jar deploy
 ```
 
 Commit the changes to the mvn-repo and push the changes.
