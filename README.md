@@ -1,23 +1,21 @@
 mvn-repo
 ========
 
-A repository for maven artifacts.
+A simple GitHub based repository for maven artifacts.
 
 ## Using the repository in projects ##
-
-Ok, so there is nothing here yet, but eventually this repo can be used with the following pom.xml setup.
 
 ```xml
     <repositories>
         <repository>
            <id>kth-github</id>
-           <url>https://github.com/KTHse/mvn-repo/raw/master/</url>
+           <url>https://github.com/KTHse/mvn-repo/raw/master/releases/</url>
         </repository>
     </repositories>
 
 ```
 
-Append `snapshot` to URL to get snapshot versions.
+For snapshot versions replace `releases` with `snapshots` in the URL.
 
 ## Repo management ##
 
