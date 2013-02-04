@@ -13,11 +13,11 @@
 
   <distributionManagement>
     <repository>
-      <id>repo</id>
+      <id>releases</id>
       <url>https://github.com/KTHse/mvn-repo/raw/master/releases</url>
     </repository>
     <snapshotRepository>
-      <id>snapshot-repo</id>
+      <id>snapshots</id>
       <url>https://github.com/KTHse/mvn-repo/raw/master/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
@@ -37,7 +37,6 @@
       <version>${project.parent.version}</version>
     </dependency>
     
-    <!-- CouchBase -->
     <dependency>
       <groupId>couchbase</groupId>
       <artifactId>couchbase-client</artifactId>
@@ -49,15 +48,5 @@
       <artifactId>gson</artifactId>
       <version>2.2.2</version>
     </dependency>
-
-    <!-- Test dependencies -->
-    <!--
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>1.9.0</version>
-      <scope>test</scope>
-    </dependency>
-    -->
   </dependencies>
 </project>
