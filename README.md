@@ -18,7 +18,7 @@ Ok, so there is nothing here yet, but eventually this repo can be used with the 
 </distributionManagement>
 ```
 
-** Repo management **
+## Repo management ##
 
 First of all, clone the mvn-repo if you haven't already, this obviously only needs to be done
 once, but you may want to update your copy with a `git pull --rebase` instead
