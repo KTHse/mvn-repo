@@ -7,7 +7,7 @@ A repository for maven artifacts.
 
 Ok, so there is nothing here yet, but eventually this repo can be used with the following pom.xml setup.
 
-```
+```xml
     <repositories>
         <repository>
            <id>kth-github</id>
