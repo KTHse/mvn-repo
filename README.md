@@ -3,6 +3,8 @@ mvn-repo
 
 A repository for maven artifacts.
 
+## Using the repository in projects ##
+
 Ok, so there is nothing here yet, but eventually this repo can be used with the following pom.xml setup.
 
 ```
@@ -35,6 +37,13 @@ cd some-project
 mvn -DaltDeploymentRepository=snapshot-repo::default::file:../mvn-repo clean deploy
 ```
 
+Optionally you may want to include a source jar for that truly open source feeling and
+to make it easier to use your code in, e.g., Eclipse.
+
+```
+mvn -DaltDeploymentRepository=snapshot-repo::default::file:../mvn-repo clean source:jar deploy
+```
+
 Commit the changes to the mvn-repo and push the changes.
 
 ```
@@ -44,3 +53,5 @@ git add <something>
 git commit -m "Some comment"
 git push
 ```
+
+Now your artifacts can be used by projects as mentioned above.
