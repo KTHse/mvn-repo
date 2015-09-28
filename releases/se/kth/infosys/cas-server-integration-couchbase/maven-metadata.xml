@@ -3,7 +3,7 @@
   <groupId>se.kth.infosys</groupId>
   <artifactId>cas-server-integration-couchbase</artifactId>
   <versioning>
-    <release>3.0.1</release>
+    <release>3.0.2</release>
     <versions>
       <version>1.0.0</version>
       <version>1.1.0</version>
@@ -14,7 +14,8 @@
       <version>2.1.2</version>
       <version>3.0.0</version>
       <version>3.0.1</version>
+      <version>3.0.2</version>
     </versions>
-    <lastUpdated>20150927161015</lastUpdated>
+    <lastUpdated>20150928115057</lastUpdated>
   </versioning>
 </metadata>
